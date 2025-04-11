@@ -1,0 +1,3 @@
+[submodule "cygno-analyzer"]
+	path = cygno-analyzer
+	url = https://github.com/piacent/cygno-analyzer.git
