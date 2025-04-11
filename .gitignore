@@ -1,0 +1,5 @@
+*.exe
+.DS_Store
+*.root
+debug
+.vscode
