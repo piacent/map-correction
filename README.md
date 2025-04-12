@@ -4,5 +4,7 @@ Code for pixel-by-pixel application of map correction, to compute correction to 
 
 ## To compile
 
-To DO.
+```
+g++ cygno-analyzer/Analyzer.cxx ApplyMapCorrection.cxx -o run.exe `root-config --libs --cflags` -lSpectrum
+```
 
