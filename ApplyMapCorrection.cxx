@@ -170,7 +170,7 @@ int main(int argc, char** argv) {
                     if(run<59253) { // fixed orientation from Run5 on
                         corr = hmap->GetBinContent((int)((nbinsy-YPix[i])/binwidth), (int)((nbinsx-XPix[i])/binheight));
                     } else {
-                        corr = hmap->GetBinContent((int)((XPix[i])/binwidth), (int)((nbinsy-YPix[i])/binheight));
+                        corr = hmap->GetBinContent((int)((nbinsx-XPix[i])/binwidth), (int)((nbinsy-YPix[i])/binheight));
                     }
                     ZPixCorr.push_back(ZPix[i]/corr);
                 }
