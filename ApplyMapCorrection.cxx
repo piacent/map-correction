@@ -166,8 +166,12 @@ int main(int argc, char** argv) {
                 vector<float> ZPixCorr;
 
                 for(int i=BeginScPix[clu];i<EndScPix[clu];i++) {
-                    float corr = hmap->GetBinContent((int)((nbinsy-YPix[i])/binwidth), (int)((nbinsx-XPix[i])/binheight));
-
+                    float corr = 1.0;
+                    if(run<59253) { // fixed orientation from Run5 on
+                        corr = hmap->GetBinContent((int)((nbinsy-YPix[i])/binwidth), (int)((nbinsx-XPix[i])/binheight));
+                    } else {
+                        corr = hmap->GetBinContent((int)((XPix[i])/binwidth), (int)((nbinsy-YPix[i])/binheight));
+                    }
                     ZPixCorr.push_back(ZPix[i]/corr);
                 }
 
