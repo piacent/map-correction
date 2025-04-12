@@ -168,7 +168,7 @@ int main(int argc, char** argv) {
                 for(int i=BeginScPix[clu];i<EndScPix[clu];i++) {
                     float corr = 1.0;
                     if(run<59253) { // fixed orientation from Run5 on
-                        corr = hmap->GetBinContent((int)((nbinsy-YPix[i])/binwidth), (int)((nbinsx-XPix[i])/binheight));
+                        corr = hmap->GetBinContent((int)((nbinsy-YPix[i])/binheight), (int)((nbinsx-XPix[i])/binwidth));
                     } else {
                         corr = hmap->GetBinContent((int)((nbinsx-XPix[i])/binwidth), (int)((nbinsy-YPix[i])/binheight));
                     }
